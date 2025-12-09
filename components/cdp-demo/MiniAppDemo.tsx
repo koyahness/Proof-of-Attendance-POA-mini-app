@@ -21,7 +21,7 @@ import {
   WalletDropdownDisconnect 
 } from '@coinbase/onchainkit/wallet';
 import { useAccount } from 'wagmi';
-import { POA_ABI } from '@/lib/abi';
+import { POA_ABI } from '@/lib/abit.ts';
 import { baseSepolia } from 'wagmi/chains';
 import { useMiniKit, useAddFrame } from '@coinbase/onchainkit/minikit';
 import { useCallback, useState } from 'react';
@@ -270,22 +270,4 @@ export function MiniAppDemo() {
       </div>
     </div>
   );
-}
-
-//Every button, badge, and balance chip comes straight from OnchainKit — no custom CSS required.
-
-// Step 4 Expose the Demo on the Home Page
-// app/page.tsx
-"use client";
-import { MiniAppDemo } from "@/components/cdp-demo/MiniAppDemo";
-import { useMiniKit } from "@coinbase/onchainkit/minikit";
-
-export default function HomePage() {
-  const { setFrameReady, isFrameReady } = useMiniKit();
-
-  useEffect(() => {
-    if (!isFrameReady) setFrameReady();
-  }, [isFrameReady, setFrameReady]);
-
-  return <MiniAppDemo />;
 }
