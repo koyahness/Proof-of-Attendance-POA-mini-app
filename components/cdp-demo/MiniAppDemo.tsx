@@ -271,9 +271,10 @@ export function MiniAppDemo() {
     </div>
   );
 }
-Every button, badge, and balance chip comes straight from OnchainKit — no custom CSS required.
 
-Step 4 Expose the Demo on the Home Page
+//Every button, badge, and balance chip comes straight from OnchainKit — no custom CSS required.
+
+// Step 4 Expose the Demo on the Home Page
 // app/page.tsx
 "use client";
 import { MiniAppDemo } from "@/components/cdp-demo/MiniAppDemo";
